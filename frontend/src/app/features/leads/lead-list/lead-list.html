@@ -1,0 +1,38 @@
+<div class="lead-list-container">
+  <div class="table-header">
+    <h2>Leads Dashboard</h2>
+    <p>Manage and track your recent prospects</p>
+  </div>
+  
+  <div class="table-responsive">
+    <table class="modern-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email Address</th>
+          <th>Status</th>
+          <th class="text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let lead of leads; let i = index">
+          <td class="user-name">{{ lead.name }}</td>
+          <td class="user-email">{{ lead.email }}</td>
+          <td>
+            <span class="status-badge" [ngClass]="lead.status">
+              {{ lead.status }}
+            </span>
+          </td>
+          <td class="actions">
+            <button class="btn-icon update" (click)="updateStatus(lead._id!, lead.status)" title="Update">
+              <i class="fa fa-refresh"></i> Update
+            </button>
+            <button class="btn-icon delete" (click)="deleteLead(lead._id!)" title="Delete">
+              <i class="fa fa-trash"></i> Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

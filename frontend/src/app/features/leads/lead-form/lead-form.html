@@ -1,0 +1,19 @@
+<div class="lead-form">
+  <h2>Add New Lead</h2>
+  <form (ngSubmit)="addLead()">
+    <label for="name">Name:</label>
+    <input id="name" [(ngModel)]="lead.name" name="name" required />
+
+    <label for="email">Email:</label>
+    <input id="email" [(ngModel)]="lead.email" name="email" required />
+
+    <label for="status">Status:</label>
+    <select id="status" [(ngModel)]="lead.status" name="status">
+      <option value="new">New</option>
+      <option value="contacted">Contacted</option>
+      <option value="closed">Closed</option>
+    </select>
+
+    <button type="submit">Add Lead</button>
+  </form>
+</div>

@@ -1,0 +1,12 @@
+body {
+  background: radial-gradient(at top left, #e0eafc, #cfdef3); /* Soft blue silk */
+  min-height: 100vh;
+}
+
+.lead-list {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}

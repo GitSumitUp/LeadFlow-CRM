@@ -1,0 +1,83 @@
+/* Container & Background */
+.lead-form {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 32px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+/* Typography */
+.lead-form h2 {
+  text-align: left; 
+  margin-bottom: 24px;
+  color: #1e293b;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.lead-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; 
+}
+
+/* Form Controls */
+.lead-form label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #64748b;
+  margin-bottom: -10px; 
+}
+
+.lead-form input,
+.lead-form select {
+  padding: 12px 14px;
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #334155;
+  transition: all 0.2s ease;
+}
+
+.lead-form input:hover,
+.lead-form select:hover {
+  border-color: #94a3b8;
+}
+
+.lead-form input:focus,
+.lead-form select:focus {
+  background-color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+  outline: none;
+}
+
+/* Modern Button Style */
+.lead-form button {
+  margin-top: 8px;
+  padding: 12px;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+}
+
+.lead-form button:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 6px 10px -1px rgba(37, 99, 235, 0.3);
+}
+
+.lead-form button:active {
+  transform: scale(0.98);
+}

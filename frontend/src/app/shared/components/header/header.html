@@ -1,0 +1,22 @@
+<nav class="custom-navbar">
+  <div class="nav-container">
+    <a routerLink="/home" class="nav-brand">
+      <img src="assets/images/logo.jpeg" alt="Logo" class="brand-logo" />
+      <span class="brand-name">TradeTrack Dashboard</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a routerLink="/dashboard" routerLinkActive="active">Home</a></li>
+      <li><a routerLink="/addLead" routerLinkActive="active">Add Lead</a></li>
+      <li><a routerLink="/leads" routerLinkActive="active">Lead List</a></li>
+      
+      <li class="dropdown">
+        <a class="dropdown-trigger">More ▾</a>
+        <ul class="dropdown-content">
+          <li><a routerLink="/privacy-policy" routerLinkActive="active">Privacy & Policy</a></li>
+          <li><a routerLink="/disclaimer" routerLinkActive="active">Disclaimer</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,57 @@
+<div class="dashboard">
+  <h2>Revenue Insights Dashboard</h2>
+
+  <!-- Cards -->
+  <div class="cards">
+    <div class="card">
+      <h3>Total Leads</h3>
+      <!-- <p>{{ totalLeads }}</p> -->
+       <p>{{ 200 }}</p>
+    </div>
+    <div class="card">
+      <h3>Closed Leads</h3>
+      <!-- <p>{{ closedLeads }}</p> -->
+        <p>{{ 120 }}</p>
+    </div>
+    <div class="card">
+      <h3>Conversion %</h3>
+      <!-- <p>{{ conversionRate }}%</p> -->
+      <p>{{ 60 }}%</p>
+
+    </div>
+  </div>
+
+  <div class="charts">
+  <!-- Pie Chart -->
+  <div class="chart-box">
+    <h3>Status Distribution</h3>
+    <canvas baseChart
+      [data]="pieChartData"
+      [labels]="pieChartLabels"
+      [type]="'pie'">
+    </canvas>
+  </div>
+
+  <!-- Line Chart -->
+  <div class="chart-box">
+  <h3>Conversion Rate (Per Week)</h3>
+  <canvas baseChart
+    [data]="lineChartData"
+    [type]="'line'">
+  </canvas>
+</div>
+
+
+</div>
+
+<div class="chart-box">
+  <h3>Monthly Leads</h3>
+  <canvas baseChart
+    [data]="barChartData"
+    [labels]="barChartLabels"
+    [type]="'bar'">
+  </canvas>
+</div>
+
+
+</div>
