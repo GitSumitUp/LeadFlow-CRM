@@ -65,7 +65,7 @@ src/app/
 ## ⚙️ Installation & Setup
 
 ### Backend
-```bash
+    ```bash
 cd backend
 npm install
 npm start
@@ -73,14 +73,16 @@ npm start
 Runs on http://localhost:3000
 Make sure MongoDB is running locally or update connection string in config/db.js
 
-### Frontend
 
+### Frontend
+     ```bash
 cd frontend
 npm install
 ng serve
 Runs on http://localhost:4200
 
-📊 Dashboard Charts
+### 📊 Dashboard Charts
+      ```bash
 Pie Chart: Lead status distribution (New, Contacted, Closed)
 
 Line Chart: Leads growth per day
