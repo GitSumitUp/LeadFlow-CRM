@@ -65,7 +65,6 @@ src/app/
 ## ⚙️ Installation & Setup
 
 ### Backend
-    ```bash
 cd backend
 npm install
 npm start
