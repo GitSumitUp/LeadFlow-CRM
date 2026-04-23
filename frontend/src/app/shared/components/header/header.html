@@ -1,4 +1,4 @@
-<nav class="custom-navbar">
+<!-- <nav class="custom-navbar">
   <div class="nav-container">
     <a routerLink="/home" class="nav-brand">
       <img src="assets/images/logo.jpeg" alt="Logo" class="brand-logo" />
@@ -19,4 +19,51 @@
       </li>
     </ul>
   </div>
-</nav>
+</nav> -->
+
+<header class="header-container">
+  <div class="header-left">
+    <div class="logo-section">
+      <img src="assets/logo-icon.png" alt="Logo" class="logo-icon">
+      <div class="brand-text">
+        <span class="brand-name">Byte Fx <span class="accent-text">Risk Control</span></span>
+        <span class="version-tag">v1.9.8 - Risk Engine</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-center">
+    <div class="stat-pill">Positions: <span class="val">0</span></div>
+    <div class="stat-pill">Float PnL: <span class="val pnl-green">$0.00</span></div>
+    <div class="stat-pill">Day PnL: <span class="val pnl-green">$0.00</span></div>
+    <div class="stat-pill">Active: <span class="val">0</span></div>
+  </div>
+
+  <ul class="nav-links">
+      <li><a routerLink="/dashboard" routerLinkActive="active">Home</a></li>
+      <li><a routerLink="/addLead" routerLinkActive="active">Add Lead</a></li>
+      <li><a routerLink="/leads" routerLinkActive="active">Lead List</a></li>
+      
+      <li class="dropdown">
+        <a class="dropdown-trigger">More ▾</a>
+        <ul class="dropdown-content">
+          <li><a routerLink="/privacy-policy" routerLinkActive="active">Privacy & Policy</a></li>
+          <li><a routerLink="/disclaimer" routerLinkActive="active">Disclaimer</a></li>
+        </ul>
+      </li>
+    </ul>
+
+  <div class="header-right">
+    <div class="search-box">
+      <i class="search-icon"></i>
+      <input type="text" placeholder="Search login or name...">
+    </div>
+    <div class="status-indicators">
+      <span class="time-stamp">2:37:09 PM</span>
+      <span class="api-badge">API</span>
+      <div class="user-menu">
+        <i class="menu-dots"></i>
+      </div>
+    </div>
+  </div>
+</header>

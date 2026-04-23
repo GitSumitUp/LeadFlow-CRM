@@ -1,6 +1,34 @@
+/* 1. Remove default browser spacing */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #0b1118; /* Matching your dark theme */
+}
+
+/* 2. Hide the default browser scrollbar globally */
+html {
+  overflow: hidden; /* Prevents the main browser window from scrolling */
+}
+
 body {
   background: radial-gradient(at top left, #e0eafc, #cfdef3); /* Soft blue silk */
   min-height: 100vh;
+}
+
+/* 3. Ensure the Angular root component fills the screen */
+app-root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* 4. Standardize box-sizing for all elements */
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 .lead-list {

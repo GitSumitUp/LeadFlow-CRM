@@ -15,12 +15,16 @@ export class LeadService {
     return this.http.post<Lead>(`${this.apiUrl}/add`, lead);
   }
 
-  getLeads(): Observable<Lead[]> {
-    return this.http.get<Lead[]>(`${this.apiUrl}/all`);
+  getLeads(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/all`);
   }
 
-  updateLeadStatus(id: number, status: 'new' | 'contacted' | 'closed'): Observable<Lead> {
-    return this.http.put<Lead>(`${this.apiUrl}/${id}`, { status });
+   getStats(): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/stats`);
+  }
+
+  updateLeadStatus(id: number, status: 'new' | 'contacted' | 'closed'): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/${id}`, { status });
   }
 
   deleteLead(id: number): Observable<void> {

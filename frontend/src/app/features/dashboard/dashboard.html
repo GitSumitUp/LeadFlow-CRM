@@ -1,57 +1,143 @@
 <div class="dashboard">
-  <h2>Revenue Insights Dashboard</h2>
-
-  <!-- Cards -->
-  <div class="cards">
-    <div class="card">
-      <h3>Total Leads</h3>
-      <!-- <p>{{ totalLeads }}</p> -->
-       <p>{{ 200 }}</p>
+  <div class="header">
+    <h2>MT5 Upload & Analysis</h2>
+    <div class="actions">
+      <button class="btn btn-outline">Export PDF</button>
+      <button class="btn btn-cyan">Clear & Upload New</button>
     </div>
-    <div class="card">
-      <h3>Closed Leads</h3>
-      <!-- <p>{{ closedLeads }}</p> -->
-        <p>{{ 120 }}</p>
-    </div>
-    <div class="card">
-      <h3>Conversion %</h3>
-      <!-- <p>{{ conversionRate }}%</p> -->
-      <p>{{ 60 }}%</p>
+  </div>
 
+  <div class="status-banner">
+    <div class="banner-content">
+      <span class="check-mark">✔ Parsed</span>
+      <span class="file-name">ReportHistory.xlsx</span>
+      <span class="meta">Account: <span class="highlight-cyan">164558</span></span>
+      <span class="meta">Name: <strong>Umesh Vishwanath Gore</strong></span>
+      <span class="meta">Deals: <strong>481</strong></span>
+    </div>
+  </div>
+
+  <div class="analysis-btn-group">
+    <button class="btn-analysis">Forensic Analysis <span class="count">320</span></button>
+    <button class="btn-analysis">Strategy Fingerprint <span class="count">320</span></button>
+    <button class="btn-analysis">Prosecution Board <span class="count">320</span></button>
+    <button class="btn-analysis active">AI Deep Analysis <span class="count">320</span></button>
+  </div>
+
+  <div class="kpi-row">
+    <div class="kpi-card">
+      <p>NET PROFIT</p>
+      <h3 class="profit">+$76,854.10</h3>
+    </div>
+    <div class="kpi-card">
+      <p>WIN RATE</p>
+      <h3>56.3%</h3>
+    </div>
+    <div class="kpi-card">
+      <p>PROFIT FACTOR</p>
+      <h3>1.96</h3>
+    </div>
+    <div class="kpi-card">
+      <p>TOTAL TRADES</p>
+      <h3>320</h3>
+    </div>
+    <div class="kpi-card">
+      <p>AVG HOLD</p>
+      <h3>24.0m</h3>
+    </div>
+    <div class="kpi-card">
+      <p>SHARPE</p>
+      <h3>9.07</h3>
+    </div>
+  </div>
+
+  <div class="tabs-primary">
+    <span>OVERVIEW</span>
+    <span>DEALS</span>
+    <span>SYMBOLS</span>
+    <span>DAILY</span>
+    <span>HOURLY</span>
+    <span>EQUITY</span>
+    <span class="active">✨ AI ANALYSIS</span>
+    <span>💬 CHAT</span>
+  </div>
+
+  <div class="tabs-icons">
+    <div class="icon-tab"><i>📊</i> Overview</div>
+    <div class="icon-tab"><i>🛡️</i> Risk Scans</div>
+    <div class="icon-tab"><i>🧠</i> Behavior</div>
+    <div class="icon-tab"><i>⏱️</i> Timing</div>
+    <div class="icon-tab"><i>📅</i> Daily P&L</div>
+    <div class="icon-tab"><i>📉</i> Decay</div>
+    <div class="icon-tab"><i>🎲</i> Martingale</div>
+    <div class="icon-tab"><i>📈</i> Spike/Level</div>
+    <div class="icon-tab active"><i>👥</i> Copy Detect</div>
+    <div class="icon-tab"><i>📰</i> News</div>
+  </div>
+
+  <div class="risk-row">
+    <div class="risk-score-container">
+      <div class="circle">44</div>
+      <div class="risk-label">
+        <p>Risk Score: 44/100</p>
+        <span class="status-badge">NORMAL</span>
+      </div>
+    </div>
+
+    <div class="risk-metrics">
+      <div class="metric">
+        <p>SAME-SECOND EVENTS</p>
+        <h4>1</h4>
+      </div>
+      <div class="metric">
+        <p>MAX TRADES/SECOND</p>
+        <h4>2</h4>
+      </div>
+      <div class="metric">
+        <p>TIMING REGULARITY</p>
+        <h4 class="text-success">4.1%</h4>
+      </div>
+      <div class="metric">
+        <p>LOT SIZE VARIANCE (CV)</p>
+        <h4 class="text-success">0.457</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="charts-grid">
+    <div class="chart-box full-width">
+      <div class="chart-header">SAME-SECOND CLUSTERS</div>
+      <div class="chart-placeholder">
+        <div class="yellow-gradient-area"></div>
+      </div>
     </div>
   </div>
 
   <div class="charts">
-  <!-- Pie Chart -->
-  <div class="chart-box">
-    <h3>Status Distribution</h3>
-    <canvas baseChart
-      [data]="pieChartData"
-      [labels]="pieChartLabels"
-      [type]="'pie'">
-    </canvas>
+    <div class="chart-box">
+      <h3>Status Distribution</h3>
+      <canvas baseChart
+        [data]="pieChartData"
+        [labels]="pieChartLabels"
+        [type]="'pie'">
+      </canvas>
+    </div>
+
+    <div class="chart-box">
+      <h3>Conversion Rate (Weekly)</h3>
+      <canvas baseChart
+        [data]="lineChartData"
+        [type]="'line'">
+      </canvas>
+    </div>
   </div>
 
-  <!-- Line Chart -->
-  <div class="chart-box">
-  <h3>Conversion Rate (Per Week)</h3>
-  <canvas baseChart
-    [data]="lineChartData"
-    [type]="'line'">
-  </canvas>
-</div>
-
-
-</div>
-
-<div class="chart-box">
-  <h3>Monthly Leads</h3>
-  <canvas baseChart
-    [data]="barChartData"
-    [labels]="barChartLabels"
-    [type]="'bar'">
-  </canvas>
-</div>
-
-
+  <div class="chart-box full">
+    <h3>Monthly Leads</h3>
+    <canvas baseChart
+      [data]="barChartData"
+      [labels]="barChartLabels"
+      [type]="'bar'">
+    </canvas>
+  </div>
 </div>

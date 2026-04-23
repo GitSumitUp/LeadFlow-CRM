@@ -1,5 +1,5 @@
 .custom-footer {
-  background-color: #1e293b; /* Deep slate blue */
+  background-color: #1e293b; 
   color: #f8fafc;
   padding: 60px 0 0 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -9,17 +9,16 @@
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+  flex-wrap: wrap; 
   gap: 40px;
   padding: 0 20px 40px 20px;
 }
 
 .footer-section {
   flex: 1;
-  min-width: 250px; /* Ensures items don't get too squashed */
+  min-width: 250px; 
 }
 
-/* Logo Styling */
 .footer-logo-container {
   width: 120px;
   height: 120px;

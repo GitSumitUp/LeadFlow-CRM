@@ -1,3 +1,14 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<div class="app-wrapper">
+  <app-header></app-header>
+
+  <div class="middle-container">
+    <app-sidebar  [class.hidden]="!isSidebarVisible"
+  (toggle)="toggleSidebar()"></app-sidebar>
+    
+    <main class="page-content" [class.expanded]="!isSidebarVisible">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+
+  <!-- <app-footer></app-footer> -->
+</div>

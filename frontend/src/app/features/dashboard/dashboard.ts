@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Lead } from '../../shared/models/lead';
 import { LeadService } from '../../services/lead';
 import { BaseChartDirective } from 'ng2-charts';
-
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -53,7 +53,7 @@ barChartData = {
 };
 
 
-  constructor(private leadService: LeadService) {}
+  constructor(private leadService: LeadService, private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
     this.leadService.getLeads().subscribe({
@@ -91,5 +91,17 @@ barChartData = {
         console.error('Error fetching leads:', err);
       }
     });
+
+    this.leadService.getStats().subscribe(stats => {
+      this.cdr.detectChanges();
+    console.log("Stats from bot/backend:", stats);
+    this.lineChartData.labels = ['Total', 'Closed', 'Conversion Rate'];
+    this.lineChartData.datasets[0].data = [stats.total, stats.closed, stats.conversionRate];
+    this.totalLeads = stats.total;
+    this.closedLeads = stats.closed;
+    this.conversionRate = stats.conversionRate;
+     this.cdr.detectChanges();
+  });
   }
+
 }

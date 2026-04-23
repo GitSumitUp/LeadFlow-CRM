@@ -1,0 +1,47 @@
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; 
+  background-color: #050a0f;
+}
+
+app-header, app-footer {
+  flex-shrink: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+.middle-container {
+  display: flex;
+  flex: 1; 
+  overflow: hidden; 
+}
+
+app-sidebar {
+  width: 270px;
+  height: 100%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+  border-right: 1px solid #1a222d;
+}
+
+app-sidebar.hidden {
+  transform: translateX(-100%);
+  margin-left: -270px;
+}
+
+.page-content {
+  flex: 1;
+  overflow-y: auto; 
+  overflow-x: hidden;
+  background-color: #050a0f;
+  
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
+}
+
+.page-content::-webkit-scrollbar {
+  display: none; 
+}
