@@ -75,16 +75,13 @@ Make sure MongoDB is running locally or update connection string in config/db.js
 
 
 ### Frontend
-     ```bash
 cd frontend
 npm install
 ng serve
 Runs on http://localhost:4200
 
 ### 📊 Dashboard Charts
-      ```bash
 Pie Chart: Lead status distribution (New, Contacted, Closed)
-
 Line Chart: Leads growth per day
 Bar Chart: Monthly conversion rate
 Stacked Bar Char: Status breakdown per month
